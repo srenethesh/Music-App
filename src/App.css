@@ -1,0 +1,161 @@
+.container{
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  color:rgba(135,25,45,0.6) ;
+}
+.card{
+  margin-top: 5%;
+  background-color: rgba(225,225,225,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 25px;
+  padding: 2px 16px;
+}
+.card:hover{
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+ 
+}
+.cards{
+  margin-top: 5%;
+  background-color: rgba(225,225,225,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 10%;
+  border-radius: 25px;
+  padding: 2px 16px;
+  left: 100px;
+  position:absolute;
+}
+.cards:hover{
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.img{
+  border-radius: 15px;
+  margin-top:30px;
+}
+.controls {
+  margin-top: 1rem;
+
+  
+}
+
+.play-button {
+  background-color: #ac64a4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.play-button:hover {
+  background-color: #864e7e;
+  transform: scale(1.05);
+}
+
+
+.track {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.track-slider {
+  width: 60%;
+}
+
+.adjustments {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.slider-grp {
+  margin-bottom: 15px;
+}
+
+.slider-grp label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  margin: 10px 0;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+input[type=range]::-webkit-slider-runnable-track {
+  background: #82567b;
+  height: 8px;
+  border-radius: 4px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  background: white;
+  border: 2px solid #82567b;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px; 
+}
+
+/* Firefox */
+input[type=range]::-moz-range-track {
+  background: #82567b;
+  height: 8px;
+  border-radius: 4px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  background: white;
+  border: 2px solid #82567b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Microsoft Edge (IE) */
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 8px;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #82567b;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #82567b;
+}
+
+input[type=range]::-ms-thumb {
+  height: 18px;
+  width: 18px;
+  background: white;
+  border: 2px solid #82567b;
+  border-radius: 50%;
+  cursor: pointer;
+}
