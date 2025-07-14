@@ -63,12 +63,12 @@ function App() {
 
 
   //updating currentTime while playing
-  const UpdatingTime = (seek = 0)=>{
+  const UpdatingTime = (seek = 0,currentSpeed=1)=>{
     clearInterval(intervalRef.current);
     const startedAt = Tone.now();
     intervalRef.current =  setInterval(()=>{
-      const elapsedTime = Tone.now() - startedAt;
-      const time = seek+(elapsedTime)*speed;
+      const elapsedTime = (Tone.now() - startedAt)*currentSpeed;
+      const time = seek+elapsedTime;
       if(time>=duration){
         clearInterval(intervalRef.current);
         setIsPlaying(false);
@@ -92,7 +92,7 @@ function App() {
       //start playback at currentTime
       playerRef.current.playbackRate = speed;
       playerRef.current.start(0,currentTime);
-      UpdatingTime(currentTime);
+      UpdatingTime(currentTime,speed);
     } else {
       //stop playback and clear timer
       playerRef.current.stop();
@@ -111,10 +111,16 @@ function App() {
     if (isPlaying) { 
       playerRef.current.stop();
       playerRef.current.start(0,seekTime)
-      UpdatingTime(seekTime)
+      UpdatingTime(seekTime,speed)
     }
   };
-  
+  // Restart interval with new speed
+  useEffect(() => {
+    if (isPlaying) {
+      UpdatingTime(currentTime, speed); 
+    }
+  }, [speed]);
+
   //format seconds into mm:ss
   const formatTime = (sec) => {
     const min = Math.floor(sec / 60);
