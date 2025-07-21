@@ -59,6 +59,11 @@
 
 .controls {
   margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .play-button {
@@ -92,7 +97,7 @@
 }
 
 .track-slider {
-  width: 60%;
+  width: 80%;
 }
 
 .adjustments {
