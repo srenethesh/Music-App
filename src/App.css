@@ -1,4 +1,4 @@
-/* ========== Desktop (Default) Styles ========== */
+/* Desktop Styles */
 .container {
   justify-content: center;
   align-items: center;
@@ -170,7 +170,7 @@ input[type="range"]::-ms-thumb {
   cursor: pointer;
 }
 
-/* ========== Mobile Responsive Styles ========== */
+/*  Mobile Responsive Styles  */
 @media only screen and (max-width: 600px) {
   .card {
     width: 90%;
@@ -185,7 +185,7 @@ input[type="range"]::-ms-thumb {
   }
 
   .cards {
-    width: 100px;
+    width: 170px;
     left: 0;
     margin: 10% auto 0 auto;
     position: relative;
