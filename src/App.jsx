@@ -162,7 +162,8 @@ function App() {
   return (
     <div className="container">
       <h1 className="header">Music App</h1>
-      <div className="card">
+      <div className='cardContainer'>
+        <div className="card">
         <img className="img" src={musicImage} width="250" height= "250" alt="Music" />
         <h2 className='header'>Demo Music</h2>
 
@@ -200,6 +201,8 @@ function App() {
         onEqChange={updateEq}
         />
       </div>
+      </div>
+      
     </div>
   );
 }
